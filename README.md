@@ -1,6 +1,7 @@
 # 🫀 Medical Image Analysis
 The focus is on **left ventricle (LV)**, **right ventricle (RV)**, and **myocardium (MYO)** segmentation, feature map analysis, and robustness evaluation under brightness transformations.
 ## 📂 Project Structure
+```text
 Notebooks/
 ├── left-ventricle.ipynb #LV related transformations
 ├── right-ventricle.ipynb #RV related transformations
@@ -21,3 +22,4 @@ src/
 └── utils.py
 Task500_ACDC/
 └── imagesTr/ 
+```
