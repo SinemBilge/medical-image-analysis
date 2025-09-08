@@ -4,6 +4,8 @@ import numpy as np
 
 from model_template import Model
 from UNetJonathan import UNet
+import os
+
 
 STANDARD_DICT = {
     0: {
@@ -321,15 +323,19 @@ class MonaiUNet(Model):
 
 
 class UNetHeart_8_4_4(MonaiUNet):
-
     def __init__(self):
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        model_dir = os.path.join(base_dir, "models")
+        model_path = os.path.join(model_dir, "heart_monai-8-4-4_all_0_best.pt")
+
         super().__init__(
             "UNetHeart_8_4_4",
-            "models/heart_monai-8-4-4_all_0_best.pt",
+            model_path,
             n_filters_init=8,
             depth=4,
             num_res_units=4,
         )
+
 
 class UNetHeart_16_4_8(MonaiUNet):
 
